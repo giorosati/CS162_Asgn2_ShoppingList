@@ -20,21 +20,27 @@ class Item
 {
 private:
 	string name;
-	enum unit {Can, Box, Ounces, Pounds, Case};
+	enum unit {Each, Dozen, Case, Ounces, Pounds, Pint, Quart, Gallon, Other};
 	int qty;
 	double unitPrice;
+
+
+
+public:
+	//function prototypes
+	Item();  //default constructor
+	Item(string, unit, int, double); //constructor with parameters
+	~Item(); //deconsturtor
+
+
+
+	//getters
+
+
+
+	//setters
+
+
 };
-
-
-//function prototypes
-Item();
-~Item();
-
-
-//getters
-
-
-//setters
-
 
 #endif
