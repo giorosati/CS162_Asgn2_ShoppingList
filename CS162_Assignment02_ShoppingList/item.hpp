@@ -14,33 +14,24 @@
 //usings
 using std::string;
 
-
-
 class Item
 {
 private:
 	string name;
-	enum unit {Each, Dozen, Case, Ounces, Pounds, Pint, Quart, Gallon, Other};
+	string unit;
 	int qty;
 	double unitPrice;
 
-
-
 public:
 	//function prototypes
-	Item();  //default constructor
-	Item(string, unit, int, double); //constructor with parameters
-	~Item(); //deconsturtor
-
-
+	Item();								 //default constructor
+	Item(string, string, int, double);	//constructor with parameters
+	~Item();							//deconsturtor
 
 	//getters
-
-
-
-	//setters
-
-
+	string getItemName();
+	double getItemPrice();
+	int getItemQty();
 };
 
 #endif

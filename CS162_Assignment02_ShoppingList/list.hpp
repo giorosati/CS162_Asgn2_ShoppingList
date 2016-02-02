@@ -10,35 +10,39 @@
 
 //includes
 #include <iostream>
-
+#include <string>
 #include "item.hpp"
 
 //usings
 using std::string;
 
-
-
-class Item
+class List
 {
 private:
-	Item *items[];
+	Item arrayOfItems[4];
+	int arrayPosAvail;
+	int arrayCapacity;
 
 public:
-	//default constructor
+	List();					//default constructor
+	~List();				//deconstructor
+	void expandList();		//increase size of array. Makes a new larger array, copies data, deletes old array
 
-	//increase size of array - makes new bigger array, copies data, deletes old array
+	//getters
+	int getItemPosition(Item);
+	int getArrayPosAvail();
+	Item getItem(int arrayPosition);
 
-	//deconstructor
+	//setters
+	void setArrayPosAvail(int);		//sets the arrayPosAvail value
 
-	//add item (also checks if items is already in list)
-	
-	//remove item
-	
-	//output list
+	//adding & removing items
+	void overwriteItem(Item, int);	//replaces an item in the array
+	void addItem(Item);				//add item to the array
+	void removeItem(Item);			//remove an item from the array
 
-
-
+	//display
+	void displayList();			//output the list
 };
-
 
 #endif

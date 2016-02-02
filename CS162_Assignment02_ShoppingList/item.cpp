@@ -12,17 +12,45 @@
 
 //usings
 using std::string;
+using std::cout;
+using std::endl;
 
 //default constructor
 Item::Item()
 {
-	;
-
+	name = "";
+	unit = "";
+	qty = 0;
+	unitPrice = 0;
+}
+Item::Item(string nameIn, string unitIn, int qtyIn, double unitPriceIn)
+{
+	name = nameIn;
+	unit = unitIn;
+	qty = qtyIn;
+	unitPrice = unitPriceIn;
 }
 
 //deconstructor
 Item::~Item()
 {
-	;
+	//cout << "item deconstructor has run" << endl;
 }
 
+//get name
+string Item::getItemName()
+{
+	return name;
+}
+
+//get qty
+int Item::getItemQty()
+{
+	return qty;
+}
+
+//get price each
+double Item::getItemPrice()
+{
+	return unitPrice;
+}
